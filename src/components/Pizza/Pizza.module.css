@@ -1,0 +1,37 @@
+.Pizza {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    padding-bottom: 5px;
+    /* background-color: #808080; */
+    box-sizing: border-box;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+.Message {
+    position: relative;
+    left: 20%;
+    top: 45%;
+    height: 15px;
+}
+/* @media (min-width: 500px) and (min-height: 400px) {
+    .Pizza {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+    .Pizza {
+        width: 50vh;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+    .Pizza {
+        width: 700px;
+        height: 700px;
+    }
+} */
