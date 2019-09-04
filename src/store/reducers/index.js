@@ -1,3 +1,3 @@
-export { pizzaBuilderReducer } from './pizzaBuilder';
-export { orderReducer } from './order';
-export { authReducer } from './auth';
+export pizzaBuilderReducer from './pizzaBuilder';
+export orderReducerfrom './order';
+export authReducer from './auth';

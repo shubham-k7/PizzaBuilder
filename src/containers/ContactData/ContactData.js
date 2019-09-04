@@ -80,6 +80,7 @@ class ContactData extends Component {
             crust: this.props.crust,
             price: this.props.price,
             orderData: formData,
+            userId: this.props.userId,
         };
         this.props.onPurchaseStart(order, this.props.token);
 
@@ -140,6 +141,7 @@ const mapStateToProps = (state) => {
         price: state.pizzaBuilder.totalPrice,
         loading: state.order.loading,
         token: state.auth.authData.tokenId,
+        userId: state.auth.authData.userId,
     };
 }
 

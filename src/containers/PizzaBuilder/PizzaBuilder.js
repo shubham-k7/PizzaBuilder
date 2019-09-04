@@ -30,8 +30,10 @@ class PizzaBuilder extends Component {
 	purchaseHandler = () => {
 		if (this.props.isAuthenticated)
 			this.setState({ purchasing: true });
-		else 
+		else {
+			this.props.onSetAuthRedirectPath('/checkout');
 			this.props.history.push("/auth");
+		}
 	}
 
 	purchaseCancelHandler = () => {
@@ -61,6 +63,7 @@ class PizzaBuilder extends Component {
 						add={this.props.onToppingAdded}
 						remove={this.props.onToppingRemoved}
 						purchasable={this.updatePurchaseState()}
+						building={this.props.building}
 						disabled={disabledInfo}
 						isAuthenticated={this.props.isAuthenticated}
 						orderNow={this.purchaseHandler} />
@@ -93,6 +96,7 @@ const mapStateToProps = (state) => {
 		crust: state.pizzaBuilder.crust,
 		error: state.pizzaBuilder.error,
 		isAuthenticated: state.auth.authData && state.auth.authData.token !== null,
+		building: state.pizzaBuilder.building,
 	};
 }
 const mapDispatchToProps = (dispatch) => {
@@ -101,6 +105,7 @@ const mapDispatchToProps = (dispatch) => {
 		onToppingRemoved: (name) => dispatch(actions.removeToppings(name)),
 		onInitToppings: () => dispatch(actions.initToppings()),
 		onInitPurchase: () => dispatch(actions.purchaseInit()),
+		onSetAuthRedirectPath: (path) => dispatch(actions.setAuthRedirectPath(path))
 	};
 }
 

@@ -21,8 +21,6 @@ const rootReducer = combineReducers({
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, undefined, composeEnhancers(applyMiddleware(thunk)));
 
-
-
 const app = (
     <Provider store={store}>
         <BrowserRouter>
