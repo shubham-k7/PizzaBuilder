@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+   
+  .container {
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+  }
